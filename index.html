@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Planner</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Student Planner</h1>
+    
+    <div id="settingsIcon">⚙️</div>
+    <div id="settingsModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Settings</h3>
+            <label for="bgColor">Choose Background Color:</label>
+            <input type="color" id="bgColor" />
+            <div class="modal-buttons">
+                <button id="applySettings">Apply</button>
+                <button id="closeSettings">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="topSections">
+        <button class="section-toggle" onclick="toggleSection('upcomingTasks')">Upcoming</button>
+        <button class="section-toggle" onclick="toggleSection('quickTasks')">Quick</button>
+    </div>
+
+    <div id="upcomingTasks" class="task-section hidden"></div>
+    <div id="quickTasks" class="task-section hidden"></div>
+
+    <div id="courseContainer"></div>
+
+    <button id="addCourseBtn">Add Course</button>
+    <button id="showHistoryBtn">Show History</button>
+
+    <div id="courseModal" class="modal hidden">
+        <div class="modal-content">
+            <label for="courseName">Course Name:</label>
+            <input type="text" id="courseName" placeholder="e.g. COMP 2605" />
+
+            <div class="modal-buttons">
+                <button id="saveCourse">Save</button>
+                <button id="cancelCourse">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="historyModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Deleted Items (History)</h3>
+            <p>Items disappear after one week.</p>
+            <div id="historyList"></div>
+            <div class="modal-buttons">
+                <button id="closeHistory">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="style.js"></script>
+</body>
+</html>

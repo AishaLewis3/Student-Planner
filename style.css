@@ -1,0 +1,189 @@
+/* ===== General Layout ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+/* ===== Sections ===== */
+#topSections {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.task-section {
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== Course (Category) Styling ===== */
+.category {
+    margin: 15px auto;
+    padding: 12px;
+    width: 80%;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.category-title {
+    font-size: 1.1em;
+}
+
+.category-meta {
+    text-align: right;
+}
+
+.category-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-course-btn, .delete-task-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: red;
+}
+
+/* ===== Progress Bar ===== */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.progress-bar {
+    display: flex;
+    width: 200px;
+    height: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 5px 0;
+    background-color: lightgrey;
+}
+
+.progress-segment {
+    height: 100%;
+}
+
+/* ===== Subcategories (Tasks) ===== */
+.subcategory-container {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.subcategory {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.percent {
+    margin-left: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* ===== Task Circles ===== */
+.task-circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    margin-right: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background 0.2s;
+}
+
+/* Completed task styling */
+.subcategory.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* ===== Modal ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Settings Icon */
+#settingsIcon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's on top of other content */
+}
